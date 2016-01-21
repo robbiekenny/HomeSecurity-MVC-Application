@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="homesecurity_dbEntities-Web.config Connection String" description="homesecurity_dbEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/DataModel.csdl|res://*/DataModel.ssdl|res://*/DataModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=aavvwwho07.database.windows.net;initial catalog=homesecurity_db;persist security info=True;user id=robbie;password=Dublin5512;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Robbie\\Documents\\GitHub\\HomeSecurityVerificationApp\\HomeSecurityVerificationApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='homesecurity_dbEntities']/@connectionString" />
+  </parameter>
+</parameters>

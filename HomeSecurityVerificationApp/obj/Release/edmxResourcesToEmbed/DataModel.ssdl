@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="homesecurity_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Salt" Type="varbinary(max)" />
+    <Property Name="SaltedAndHashedPassword" Type="varbinary(max)" />
+    <Property Name="Verified" Type="bit" Nullable="false" />
+    <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetimeoffset" Precision="7" Nullable="false" />
+    <Property Name="UpdatedAt" Type="datetimeoffset" Precision="7" />
+    <Property Name="Deleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="homesecurity_dbModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="homesecurity" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
