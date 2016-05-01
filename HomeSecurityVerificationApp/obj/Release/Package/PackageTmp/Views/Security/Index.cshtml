@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Security";
+}
+
+<div id="signedInAs">
+    Signed in as @ViewBag.Email
+    <a href="#" onclick="location.href='@Url.Action("LogOut")'">Log Out</a>
+</div>
+
+<div id="getDevicesButton">
+    <button type="button" class="btn-success"
+            onclick="sendMessage('@ViewBag.Email','Retrieve')">
+        Retrieve Security Devices
+    </button>
+</div>
+
+<div class="container">
+    <div id="securityContainer">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="devices">
+                    <h1>Security Devices</h1>
+                    <div class="list-group" id="list">
+                        @*Security device will be dynamically added here*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="info">
+                    <div class="shell">
+                        <div class="circle">
+                            <div class="circle__inner">
+                                <div class="circle__wrapper">
+                                    <div class="circle__content" id="numDevices">0 Security Devices</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Command modal-->
+<div id="commandModal" class="modal fade" aria-labelledby="myModalLabel" aria-hidden="true" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" id="closecontactModalButton" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="commandsTitle">Controls</h4>
+            </div>
+            <div class="modal-body" id="commandModalBody">
+                <div class="controls">
+                   <h1>Lights</h1>
+                    <div class="switchContainer">
+                        <div class="switch">
+                            <input id="lightSwtich" class="cmn-toggle cmn-toggle-round" type="checkbox" onclick="lights(this)">
+                            <label for="lightSwtich"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <h1>Motion</h1>
+                    <div class="switchContainer">
+                        <div class="switch">
+                            <input id="motionSwtich" class="cmn-toggle cmn-toggle-round" type="checkbox" onclick="motion(this)">
+                            <label for="motionSwtich"></label>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="http://cdn.pubnub.com/pubnub-3.14.5.min.js"></script>
+<script src="~/Scripts/pubnub_script.js"></script>
+<script>
+    $(document).ready(function () {
+        sub('@ViewBag.Email')
+        $('.nav.navbar-nav li a').hide();
+    })
+</script>
+
+

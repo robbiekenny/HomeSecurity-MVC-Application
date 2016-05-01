@@ -3,5 +3,115 @@
     ViewBag.Title = "HomeSecurity";
 }
 
-<h2>This page will show off the android app</h2>
+
+<div id="introduction">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="image">
+                    <img class="img-responsive" src="~/Images/icon.png" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="logoText">
+                    <h1 id="logo">HomeSecurity</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <h1><u>About</u></h1>
+        <h3>
+            HomeSecurity is an android application that allows users to turn their old android devices into security cameras.
+            Designed to be very easy to use, HomeSecurity allows you to turn old android devices into security cameras in less than a minute.
+        </h3>
+        <h3>
+            Simply log in to the application either by creating an account with us or by Facebook.
+            Once you have verified your account you're ready to set up security cameras.
+        </h3>
+        <br />
+        <img class="img-responsive" src="~/Images/phones.png" />
+        <p>Create an account or login and begin using everything HomeSecurity has to offer.</p>
+    </div>
+</div>
+
+<div id="security_devices">
+    <div class="container">
+        <h1><u>Security Devices</u></h1>
+        <h3>
+            Setting up your device to act as a security camera is extremely easy. Once you've selected the Security option you'll be
+            presented with the screen below asking you to enter the name of the room this security camera is being placed in.
+        </h3>
+        <br />
+        <img id="roomDetailsImage" class="img-responsive" src="~/Images/room details page.png" />
+        <p>Enter the name of the room and this device will be listed as a security device.</p>
+        <br />
+        <h3>
+            Upon successful completion of entering the room name you will be presented with a view of the devices camera indicating
+            that this device is now a security device.
+        </h3>
+        <br />
+        <img class="img-responsive" src="~/Images/motion detection screen.png" />
+        <p>You can switch between the front or back camera depending on what you need</p>
+    </div>
+</div>
+
+<div id="personal_devices">
+    <div class="container">
+        <h1><u>Personal Devices</u></h1>
+        <h3>
+            A personal device is a term HomeSecurity uses to descibe the device that will control your security devices.
+            Just like setting up a security device, setting up a personal device is just as easy. By clicking on the Personal option
+            after you login your device will act as a personal device and can begin searching for active security devices and previous videos
+            created by those security devices.
+        </h3>
+        <br />
+        <img class="img-responsive" src="~/Images/personal device image.png" />
+        <p>list of security devices and a list of videos created by the security devices. Clicking on an item in the security devices 
+        list will display controls that will aloow you to control the device while clicking on a video from the list will allow you 
+        to view it.</p>
+        <br />
+
+        <img class="img-responsive" src="~/Images/command controls image.png" />
+        <p>Enable or disable the lights and motion detection with the click of a button or request a 30 second video from the device.</p>
+        <br />
+
+        <img class="img-responsive" src="~/Images/play video image.png" />
+        <p>Play back your videos captured by security devices by clicking on a video from the list which is ordered from newest to oldest.</p>
+
+    </div>
+</div>
+
+<div id="web_app">
+    <div class="container">
+        <h1><u>Web Application</u></h1>
+        <h3>
+           Should you find yourself without an android mobile device at your disposal you can simply log in to this web application 
+            and control part of your security devices.
+        </h3>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive" src="~/Images/webimage.png" />
+                <p>Retrieve security devices</p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="~/Images/webimage2.png" />
+                <p>Enable/disable the devices flashlight and ability to detect motion</p>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('.nav.navbar-nav li a').show();
+    });
+</script>
+<script src="~/Scripts/pubnub_script.js"></script>
 
