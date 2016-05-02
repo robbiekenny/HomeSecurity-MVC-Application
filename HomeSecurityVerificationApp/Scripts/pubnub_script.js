@@ -25,7 +25,7 @@ function sub(channel) {
 }
 
 function displayDevice(device) { //take the device name recieved in from the channel and display it in a list
-    console.log(device)
+    //console.log(device)
 
     if (device.substr(0, 7) == "Details")
     {
@@ -49,9 +49,12 @@ function displayDevice(device) { //take the device name recieved in from the cha
 
        
         $("#devices #list button").addClass('list-group-item');
-
-        document.getElementById("numDevices").innerHTML = rooms + " Security Devices";
     }
+    updateNumberOfDevices();
+}
+
+function updateNumberOfDevices() {
+    document.getElementById("numDevices").innerHTML = rooms + " Security Devices";
 }
 
 function sendMessage(channel, message) //send message to channel
@@ -83,22 +86,22 @@ function displayDeviceControls(roomName) //display a modal which will be in char
 
 function motion(checkbox) {
     if (checkbox.checked) {
-        console.log("MOTION ON");
+        //console.log("MOTION ON");
         sendMessage(channelID, "MotionOn" + roomName);
     }
     else {
-        console.log("MOTION OFF");
+        //console.log("MOTION OFF");
         sendMessage(channelID, "MotionOff" + roomName);
     }
 }
 
 function lights(checkbox) {
     if (checkbox.checked) {
-        console.log("LIGHTS ON");
+        //console.log("LIGHTS ON");
         sendMessage(channelID, "LightsOn" + roomName);
     }
     else{
-        console.log("LIGHTS OFF");
+        //console.log("LIGHTS OFF");
         sendMessage(channelID, "LightsOff" + roomName);
     }
     
