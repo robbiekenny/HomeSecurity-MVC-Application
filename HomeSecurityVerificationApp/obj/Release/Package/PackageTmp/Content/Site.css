@@ -22,6 +22,12 @@ body {
     padding-top:20px;
 }
 
+#videoContainer{
+    padding-top:85px;
+    margin: auto;
+    width: 60%;
+}
+
 #introduction {
 	height:100vh;
 }

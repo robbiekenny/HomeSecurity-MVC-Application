@@ -3,10 +3,19 @@
     ViewBag.Title = "Playing video";
 }
 
-<video id="vid1" class="azuremediaplayer amp-default-skin"  controls width="640" height="400" poster="poster.jpg" data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "silverlightSS", "html5"], "nativeControlsForTouch": false}'>
-    <source src="@ViewBag.video" type="application/vnd.ms-sstr+xml" />
-    <p class="amp-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
-    </p>
-</video>
+<div id="videoContainer">
+    <video id="vid1" class="azuremediaplayer amp-default-skin" controls width="640" height="400" poster="poster.jpg" data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "silverlightSS", "html5"], "nativeControlsForTouch": false}'>
+        <source src="@ViewBag.video" type="application/vnd.ms-sstr+xml" />
+        <p class="amp-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
+        </p>
+    </video>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('.nav.navbar-nav li a').hide();
+    });
+</script>
 
